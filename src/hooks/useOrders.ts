@@ -19,18 +19,6 @@ export function useOrders() {
           (dayjs(order.date).isSame(startDate, "day") || dayjs(order.date).isAfter(startDate, "day")) &&
           (dayjs(order.date).isSame(endDate, "day") || dayjs(order.date).isBefore(endDate, "day"))
       );
-    } else if (startDate) {
-      result = result.filter(
-        (order) =>
-          dayjs(order.date).isAfter(startDate, "day") ||
-          dayjs(order.date).isSame(startDate, "day")
-      );
-    } else if (endDate) {
-      result = result.filter(
-        (order) =>
-          dayjs(order.date).isBefore(endDate, "day") ||
-          dayjs(order.date).isSame(endDate, "day")
-      );
     }
 
     setFilteredOrders(result);
