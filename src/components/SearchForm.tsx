@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button, DatePicker, Select } from "antd";
-import dayjs, { Dayjs } from "dayjs";
+import { Dayjs } from "dayjs";
 
 interface SearchFormProps {
   onSearch: (values: any) => void;

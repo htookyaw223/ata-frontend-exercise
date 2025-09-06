@@ -16,6 +16,7 @@ const App: React.FC = () => {
       endDate: values.endDate,
     });
   };
+  
   // reset search form
   const onReset = () => {
     filterOrders({});
@@ -32,7 +33,6 @@ const App: React.FC = () => {
           <Text type="secondary">Search results: </Text>
           <b>{filteredOrders.length}</b>
         </div>
-
         {/* filter search form */}
         <SearchForm onSearch={handleSearch} onReset={onReset} />
       </Flex>
